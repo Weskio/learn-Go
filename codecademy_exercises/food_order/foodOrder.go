@@ -13,7 +13,7 @@ func askOrder() (string) {
 }
 
 // WRITE CONTAINS FUNCTION BELOW
-func contains(menu []string, order string) bool{
+func contains(menu []interface{}, order string) bool{
  for _,value:= range menu{
   if value == order{
     return true
@@ -23,7 +23,7 @@ func contains(menu []string, order string) bool{
 }
 
 func main() {
-  fastfoodMenu := []string{"Burgers", "Nuggets","Fries"}
+  fastfoodMenu := []interface{}{"Burgers", "Nuggets","Fries",true}
   fmt.Println("The fast food menu has these items:", fastfoodMenu)
  
   var total int
